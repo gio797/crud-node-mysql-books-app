@@ -46,13 +46,20 @@ function books() {
             <button className="delete" onClick={() => handleDelete(book.id)}>
               Delete
             </button>
-            <button className="update">Update</button>
+            <Link
+              to={`/update/${book.id}`}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <button className="update">Update</button>
+            </Link>
           </div>
         ))}
       </div>
-      <Link to="/add">
-        <button>Add New Book</button>
-      </Link>
+      <button className="formButton">
+        <Link to="/add" style={{ color: "inherit", textDecoration: "none" }}>
+          Add new book
+        </Link>
+      </button>
     </div>
   );
 }

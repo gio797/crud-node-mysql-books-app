@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function Add() {
   const navigate = useNavigate();
+
   const [error, setError] = useState(null);
   const [input, setInput] = useState({
     title: "",
@@ -61,7 +62,9 @@ function Add() {
         onChange={handleChange}
       />
       {error && error}
-      <button onClick={handleSubmit}>Add Book</button>
+      <button className="formButton" onClick={handleSubmit}>
+        Add Book
+      </button>
     </div>
   );
 }
