@@ -5,15 +5,26 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  /* overflow: hidden; */
+  background-color: gray;
 }
 
 .books {
   display: flex;
+
+  justify-content: center;
   gap: 10px;
+  width: 800px;
+  overflow: scroll;
+  /* white-space: nowrap; */
+}
+
+.books::-webkit-scrollbar {
+  display: none;
 }
 
 .book {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   align-items: center;
